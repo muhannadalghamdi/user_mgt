@@ -1,0 +1,8 @@
+galaxy_info:
+  author: Muhannad Alghamdi
+  description: Create or delete user from hosts
+  license: MIT
+  min_ansible_version: 2.4
+  galaxy_tags: [user, admin]
+
+dependencies: []

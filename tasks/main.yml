@@ -1,0 +1,14 @@
+---
+- name: Set {{ user_name }} user to be {{ user_state }} on remote host
+  become: true
+  user:
+    name: "{{ user_name }}"
+    state: "{{ user_state }}"
+    shell: /bin/bash
+    groups: wheel
+    append: yes
+
+- name: Add bashrc to include host and user
+  template:
+    dest: '~/{{ user_name }}/.bashrc'
+    str: templates/bashrc.js
